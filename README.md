@@ -19,4 +19,4 @@ Código sem erros usando orientação objetos.
 
 
 ---
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+⌨️ com ❤️😊
