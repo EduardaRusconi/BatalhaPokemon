@@ -1,0 +1,82 @@
+public class Pokemon {
+    private String name;
+    private String kind;
+    private int level;
+    private int life = 200;
+    private int attack;
+    private int defense;    
+
+    public Pokemon (String nome, String tipo, int level){
+        this.name = nome;
+        this.kind = tipo;
+        this.level = level;
+                
+        calculaAtributos();
+        calculaBonus();
+    }
+
+    public String getName(){
+      return this.name;
+    }
+
+    public int getLife(){
+        return this.life;
+    }
+    
+    public int getAttack(){
+        return this.attack;
+    }
+    
+    public int getDefense(){
+        return this.defense;
+    }
+
+    private void calculaAtributos(){
+        switch(kind){
+            case "Fire":
+                life = life - 20;
+                attack = 60;
+                defense = 20;
+            break;
+            
+            case "Water":
+                life = life - 5;
+                attack = 40;
+                defense = 35;
+            break;
+            
+            case "Plant":
+                life = life + 20;
+                attack = 15;
+                defense = 60;
+            break;
+            
+            case "Rock":
+                life = life + 25;
+                attack = 30;
+                defense = 60;
+            break;
+        }
+    }
+    
+    private void calculaBonus(){
+        
+        life = life + (level / 2);
+        attack = attack + (level / 3);
+        defense = defense + (level / 4);
+        
+    }   
+       
+    public void printPokemon(){
+        
+        System.out.println(
+                "Pokemon: " + name + " | " + 
+                    "Kind: " + kind + " | " + 
+                        "Level: " + level + " | " + 
+                            "Life: " + life + " | " +
+                                "Attack: " + attack + " | " +
+                                    "Defense: " + defense + "\n");
+        
+    }  
+    
+}
