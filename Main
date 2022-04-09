@@ -1,0 +1,19 @@
+
+public class Main {
+     public static void main(String[] args) {
+        Pokemon meuPokemon = new Pokemon("Charmander", "Fogo", 80);
+        Pokemon outroPokemon = new Pokemon("Squirtle", "Agua", 35);
+        
+        Batalhas batalha1 = new Batalhas();
+               
+        System.out.println("Yours: ");
+        meuPokemon.printPokemon();
+        System.out.println("Enemys: ");
+        outroPokemon.printPokemon();
+        
+        batalha1.meuPokemon(meuPokemon.getName(),meuPokemon.getLife());
+        batalha1.outroPokemon(outroPokemon.getName(),outroPokemon.getLife());
+        
+        batalha1.startBattle();               
+  }
+}
