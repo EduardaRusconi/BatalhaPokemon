@@ -1,0 +1,38 @@
+public class Batalhas {
+  
+    private int myPokemonLife;
+    private int otherPokemonLife;
+    private String myPokemonName;
+    private String otherPokemonName;
+    
+    public void meuPokemon(String name, int life){        
+        this.myPokemonLife = life;
+        this.myPokemonName = name;        
+    }
+    
+    public void outroPokemon(String name, int life){        
+        this.otherPokemonLife = life;
+        this.otherPokemonName = name;        
+    }
+    
+    public void startBattle(){
+        
+        System.out.println("The battle is about to begin!...");
+        System.out.println("\n");
+        System.out.println("\n");
+        System.out.println("\n");
+        
+        if(myPokemonLife > otherPokemonLife){
+            
+            System.out.println("You won the battle! Congrats" + myPokemonName);
+            
+        }else{
+            
+            System.out.println("You lost the battle! The winner is: " + otherPokemonName);
+            
+        }
+        
+    }
+    
+    
+}
